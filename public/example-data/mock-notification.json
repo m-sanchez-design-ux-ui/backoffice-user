@@ -1,0 +1,44 @@
+{
+    "notifications": [
+        {
+            "id": "2b",
+            "type": 1,
+            "description": "El lote se importó correctamente",
+            "contentId": "4c",
+            "contentValue": "#0000000712",
+            "createdAt": "19/12/2024 16:03:41"
+        },
+        {
+            "id": "38",
+            "type": 11,
+            "description": "El lote se distribuyó correctamente",
+            "contentId": "a9",
+            "contentValue": "#0000000711",
+            "createdAt": "19/12/2024 15:47:06"
+        },
+        {
+            "id": "4e",
+            "type": 11,
+            "description": "El lote se distribuyó correctamente",
+            "contentId": "cc",
+            "contentValue": "#0000000709",
+            "createdAt": "19/12/2024 15:46:46"
+        },
+        {
+            "id": "a9",
+            "type": 1,
+            "description": "El lote se importó correctamente",
+            "contentId": "8f",
+            "contentValue": "#0000000711",
+            "createdAt": "19/12/2024 15:46:33"
+        },
+        {
+            "id": "66",
+            "type": 11,
+            "description": "El lote se distribuyó correctamente",
+            "contentId": "50",
+            "contentValue": "#0000000708",
+            "createdAt": "19/12/2024 15:46:17"
+        }        
+    ]
+}

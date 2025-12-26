@@ -1,0 +1,118 @@
+{
+  "draw": 1,
+  "recordsTotal": 36,
+  "recordsFiltered": 36,
+  "total": 36,
+  "results" : [
+    {
+        "id": "00",
+        "userName": "originsw",
+        "firstName": "originSW",
+        "lastName": "originSW",
+        "createdOn": "01/01/0001",
+        "email": "originsw.ps@gmail.com",
+        "phoneNumber": "1111112",
+        "isAdmin": true,
+        "isActive": true
+    },
+    {
+        "id": "32",
+        "userName": "XMoro",
+        "firstName": "xiomaraa",
+        "lastName": "Moro",
+        "createdOn": "13/11/2024",
+        "email": "xowora9443@edectus.com",
+        "phoneNumber": "123",
+        "isAdmin": false,
+        "isActive": false
+    },
+    {
+        "id": "94",
+        "userName": "VBenitez",
+        "firstName": "Vera",
+        "lastName": "Benitez",
+        "createdOn": "03/10/2024",
+        "email": "sebas.vb@gmail.com",
+        "phoneNumber": "1234567",
+        "isAdmin": false,
+        "isActive": true
+    },
+    {
+        "id": "4c",
+        "userName": "TFeliz",
+        "firstName": "Teresa",
+        "lastName": "Feliz",
+        "createdOn": "13/11/2024",
+        "email": "tetefeh941@edectus.com",
+        "phoneNumber": "123456789",
+        "isAdmin": true,
+        "isActive": false
+    },
+    {
+        "id": "a3",
+        "userName": "SVera2",
+        "firstName": "seba",
+        "lastName": "Vera",
+        "createdOn": "22/10/2024",
+        "email": "asdasdas@gmial.com",
+        "phoneNumber": "12121212",
+        "isAdmin": true,
+        "isActive": true
+    },
+    {
+        "id": "00",
+        "userName": "SVera1",
+        "firstName": "Sebas",
+        "lastName": "Vera",
+        "createdOn": "03/10/2024",
+        "email": "hifedi2650@hraifi.com",
+        "phoneNumber": "123149",
+        "isAdmin": false,
+        "isActive": false
+    },
+    {
+        "id": "7a",
+        "userName": "SVera",
+        "firstName": "Sebastian",
+        "lastName": "Vera",
+        "createdOn": "02/10/2024",
+        "email": "sv@originsw.com",
+        "phoneNumber": "1111999",
+        "isAdmin": false,
+        "isActive": true
+    },
+    {
+        "id": "78",
+        "userName": "SGonzales",
+        "firstName": "Santiago",
+        "lastName": "Gonzales",
+        "createdOn": "09/12/2024",
+        "email": "dabayix209@bawsny.com",
+        "phoneNumber": "",
+        "isAdmin": false,
+        "isActive": true
+    },
+    {
+        "id": "e9",
+        "userName": "PSuarez1",
+        "firstName": "Pedro",
+        "lastName": "Suarez",
+        "createdOn": "16/10/2024",
+        "email": "rigafi1299@advitize.com",
+        "phoneNumber": "222222",
+        "isAdmin": true,
+        "isActive": false
+    },
+    {
+        "id": "c9",
+        "userName": "PSuarez",
+        "firstName": "Pedro",
+        "lastName": "Suarez",
+        "createdOn": "08/10/2024",
+        "email": "negaxap626@hraifi.com",
+        "phoneNumber": "111113",
+        "isAdmin": false,
+        "isActive": false
+    }
+]
+}

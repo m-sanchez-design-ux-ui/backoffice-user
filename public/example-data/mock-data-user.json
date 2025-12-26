@@ -1,0 +1,14 @@
+{
+    "currentUser": {
+        "id": "0",
+        "userName": "originsw",
+        "firstName": "originSW",
+        "lastName": "originSW",
+        "email": "originsw.ps@gmail.com",
+        "phoneNumber": "1111112",
+        "isAdmin": true,
+        "isActive": true,
+        "createdOn": "01/01/0001",
+        "updatedOn": "20/11/2024"
+    }
+}

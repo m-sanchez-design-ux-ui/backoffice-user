@@ -1,0 +1,26 @@
+{ 
+    "total": 2,  
+    "results": [    
+      {      
+        "id": "72a31b71-cef8-4eed-b955-e320b8656d87",      
+        "name": "PaySmartly",      
+        "clientId": "D8E19213ECA1983D2BADB5437AF6293A",      
+        "loginRedirectUrl": "PepApps/login",      
+        "logoutRedirectUrl": "PepApps/logout"
+      },
+      {      
+        "id": "72a31b71-cef8-4eed-b955-e320b8656d87",      
+        "name": "PaySmartly",      
+        "clientId": "D8E19213ECA1983D2BADB5437AF6293A",      
+        "loginRedirectUrl": "PepApps/login",      
+        "logoutRedirectUrl": "PepApps/logout"
+      },
+      {      
+        "id": "72a31b71-cef8-4eed-b955-e320b8656d87",      
+        "name": "PaySmartly",      
+        "clientId": "D8E19213ECA1983D2BADB5437AF6293A",      
+        "loginRedirectUrl": "PepApps/login",      
+        "logoutRedirectUrl": "PepApps/logout"
+      }
+    ]
+  }

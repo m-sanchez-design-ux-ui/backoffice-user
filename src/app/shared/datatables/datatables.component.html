@@ -1,0 +1,26 @@
+<div class="bg-white rounded-lg shadow border border-gray-200 my-4 overflow-hidden">
+  <!-- Renderizado de la tabla mediante ajax -->
+  <table
+    datatable
+    [dtOptions]="dtOptions"
+    class="table table--separate-rows table-striped display nowrap"
+    aria-describedby="Table component"
+  >
+    <thead>
+      <tr>
+        @for (title of titlesList() ; track $index) { @if($index === 0 &&
+        fistThSellectAll){
+        <th>
+          <div class="flex justify-center items-center">
+              <input id="selectAllCheckbox" type="checkbox" value="" class="w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded-sm focus:ring-primary focus:ring-2">
+              <label for="selectAllCheckbox" class="sr-only ms-2 text-sm font-medium text-gray-900">Checkbox</label>
+          </div>
+        </th>
+        } @else {
+        <th>{{ title }}</th>
+        } }
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>

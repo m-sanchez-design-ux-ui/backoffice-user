@@ -1,0 +1,59 @@
+<main class="bg-white w-full h-fit lg:h-screen p-8 flex flex-col items-center">
+   <!--//////////-->
+  <!--Elements Top Start-->
+  <div class="absolute top-0 left-0 hidden lg:block h-10">
+    <div class="w-32 h-32 2xl:w-48 2xl:h-48 absolute top-14 left-24 2xl:top-16 rounded-full bg-primary opacity-10"></div>
+    <div class="flex w-44 h-44 2xl:w-56 2xl:h-56 rounded-none rounded-br-full bg-primary opacity-15"></div>
+  </div>
+  <!--Elements Top End-->
+   <!--//////////-->
+  <div class="flex flex-col items-center justify-between gap-5 h-fit my-auto">
+  <!--Logo Client Start-->
+  <img
+    class="w-32 md:w-40 h-fit z-10 lg:absolute lg:top-8"
+    src="images/logos/lunches-logo.svg"
+    alt="Logo Lunches"
+  />
+  <!--Logo Client End-->
+  <!--//////////-->
+  <!--Container Inner Start-->
+  <section class="flex flex-col justify-center items-center z-10 w-full max-w-[400px] lg:max-w-[820px] gap-6 !min-h-80 !flex-[unset] !overflow-visible">
+    <img
+      src="images/errors/error-500.svg"
+      alt="500-error"
+      class="w-full max-w-52 xl:max-w-[300px] 2xl:max-w-[400px]"
+    />
+    <h2 class="text-gray-700 text-xl md:text-2xl font-semibold text-center">
+      ¡Ups! Algo salió mal
+    </h2>
+    <p
+      class="w-full max-w-5xl text-gray-700 text-sm md:text-base font-normal text-center leading-normal"
+    >
+      Parece que hemos tenido un problema en nuestro servidor.
+      <br>
+      Estamos trabajando para solucionarlo lo antes posible.
+      <br>
+      Intenta nuevamente en unos minutos o vuelve a la página principal.
+    </p>
+    <button [routerLink]="'/dashboard'" type="button" class="text-primary hover:text-white border border-primary hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary focus:ring-opacity-30 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Ir al Inicio</button>
+  </section>
+  <!--//////////-->
+  <!--Container Inner End-->
+  <!--//////////-->
+  <!--Logo ORIGIN Start-->
+  <img
+    src="images/logos/logo_origin.svg"
+    alt="Logo Origin"
+    class="w-20 md:w-28 h-fit z-10 lg:absolute lg:bottom-8"
+  />
+  <!--Logo ORIGIN End-->
+  </div>
+  <!--//////////-->
+  <!--Elements Bottom Start-->
+  <div class="absolute bottom-0 right-0 hidden lg:block rotate-180">
+      <div class="w-32 h-32 2xl:w-48 2xl:h-48 absolute top-14 left-24 2xl:top-16 rounded-full bg-primary opacity-10"></div>
+      <div class="flex w-44 h-44 2xl:w-56 2xl:h-56 rounded-none rounded-br-full bg-primary opacity-15"></div>
+  </div>
+   <!--Elements Bottom End-->
+   <!--//////////-->
+</main>

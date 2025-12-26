@@ -1,0 +1,221 @@
+<!--//////////-->
+<!--Breadcrumb Start-->
+<div class="flex flex-row flex-wrap justify-between items-center w-full mb-4 gap-4">
+  <app-breadcrumb [breadcrumItems]="this.breadcrumb"></app-breadcrumb>
+    <div class="flex flex-row gap-4 flex-wrap">
+      <!--//////////-->
+      <!--Primary Button Start-->
+      <button type="button"class="flex flex-row gap-2 items-center text-white bg-primary hover:bg-opacity-90 focus:ring-4 focus:ring-primary focus:ring-opacity-30 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="size-4 fill-none">
+          <path class="fill-white" fill-rule="evenodd" clip-rule="evenodd" d="M2.40039 13.6C2.40039 13.3878 2.48468 13.1843 2.63471 13.0343C2.78473 12.8843 2.98822 12.8 3.20039 12.8H12.8004C13.0126 12.8 13.216 12.8843 13.3661 13.0343C13.5161 13.1843 13.6004 13.3878 13.6004 13.6C13.6004 13.8121 13.5161 14.0156 13.3661 14.1657C13.216 14.3157 13.0126 14.4 12.8004 14.4H3.20039C2.98822 14.4 2.78473 14.3157 2.63471 14.1657C2.48468 14.0156 2.40039 13.8121 2.40039 13.6ZM5.03479 7.43438C5.18481 7.2844 5.38826 7.20015 5.60039 7.20015C5.81252 7.20015 6.01597 7.2844 6.16599 7.43438L7.20039 8.46878V2.39998C7.20039 2.1878 7.28468 1.98432 7.43471 1.83429C7.58473 1.68426 7.78822 1.59998 8.00039 1.59998C8.21256 1.59998 8.41605 1.68426 8.56608 1.83429C8.71611 1.98432 8.80039 2.1878 8.80039 2.39998V8.46878L9.83479 7.43438C9.90859 7.35797 9.99686 7.29702 10.0945 7.25509C10.1921 7.21317 10.297 7.1911 10.4033 7.19017C10.5095 7.18925 10.6148 7.20949 10.7132 7.24972C10.8115 7.28994 10.9008 7.34935 10.9759 7.42446C11.051 7.49957 11.1104 7.58889 11.1506 7.68721C11.1909 7.78553 11.2111 7.89087 11.2102 7.9971C11.2093 8.10332 11.1872 8.2083 11.1453 8.3059C11.1033 8.4035 11.0424 8.49178 10.966 8.56557L8.56599 10.9656C8.41597 11.1156 8.21252 11.1998 8.00039 11.1998C7.78826 11.1998 7.58481 11.1156 7.43479 10.9656L5.03479 8.56557C4.88481 8.41555 4.80056 8.21211 4.80056 7.99998C4.80056 7.78784 4.88481 7.5844 5.03479 7.43438V7.43438Z"/>
+        </svg>
+        <span>
+          Descargar reporte
+        </span>
+      </button>
+      <!--Primary Button End-->
+    </div>
+</div>
+<!--Breadcrumb End-->
+<!--//////////-->
+<!--Title Page Container Fixed Vertion Start-->
+<div class="grid grid-cols-1 sm:grid-cols-1 xl:grid-cols-4 gap-4 mb-4">
+  <!--//////////-->
+  <!--Title Start-->
+  <div class="flex flex-col gap-3 justify-center">
+    <h3 class="w-full pt-4 pb-0 xl:pb-4 xl:pt-4 text-xl 2xl:text-2xl text-gray-900 font-semibold">Reportes de consumo</h3>
+    <p class="text-xs 2xl:text-base font-normal text-gray-500 leading-normal">
+      Define los parámetros en el filtro para generar reportes detallados de consumo de los empleados.
+    </p>
+  </div>
+  <!--Title End-->
+  <!--//////////-->
+  <!--Empty card Start-->
+  <div class="hidden xl:block"></div>
+  <!--Empty card End-->
+  <!--//////////-->
+  <!--Card Start-->
+  <div class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow-sm flex flex-col gap-4 min-h-[132px]">
+      <div class="inline-flex gap-2 items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="fill-none size-6">
+          <g clip-path="url(#cutlery)">
+            <path class="stroke-gray-900 stroke-[1.5]" stroke-linejoin="round" d="M2.69566 2.23792L19.9658 19.5081C20.2935 19.8358 20.4776 20.2803 20.4776 20.7437C20.4776 21.2071 20.2935 21.6516 19.9658 21.9793C19.638 22.3069 19.1936 22.4909 18.7302 22.4909C18.2668 22.4909 17.8223 22.3069 17.4946 21.9793L13.2758 17.6879C12.9997 17.4076 12.8449 17.03 12.8446 16.6365V16.3773C12.8446 16.1786 12.8052 15.9819 12.7286 15.7986C12.652 15.6153 12.5397 15.449 12.3983 15.3095L11.8536 14.8065C11.6687 14.6359 11.4439 14.5145 11.1998 14.4536C10.9557 14.3926 10.7002 14.3941 10.4567 14.4578C10.0729 14.5579 9.66957 14.556 9.28672 14.4521C8.90388 14.3483 8.55484 14.1461 8.27425 13.8657L4.26972 9.86073C1.89409 7.4851 1.01987 3.89776 2.69566 2.23792Z"/>
+            <path class="stroke-gray-900 stroke-[1.5]" stroke-linecap="round" stroke-linejoin="round" d="M18.75 1.5L15.1289 5.12109C14.8503 5.39968 14.6292 5.73043 14.4784 6.09445C14.3276 6.45847 14.25 6.84863 14.25 7.24266V7.93922C14.25 8.03777 14.2306 8.13536 14.1929 8.22641C14.1552 8.31746 14.0999 8.40018 14.0302 8.46984L13.5 9"/>
+            <path class="stroke-gray-900 stroke-[1.5]" stroke-linecap="round" stroke-linejoin="round" d="M15 10.5L15.5302 9.96984C15.5998 9.90013 15.6825 9.84484 15.7736 9.80711C15.8646 9.76939 15.9622 9.74998 16.0608 9.75H16.7573C17.1514 9.75 17.5415 9.67238 17.9056 9.52158C18.2696 9.37078 18.6003 9.14974 18.8789 8.87109L22.5 5.25"/>
+            <path class="stroke-gray-900 stroke-[1.5]" stroke-linecap="round" stroke-linejoin="round" d="M20.625 3.375L16.875 7.125"/>
+            <path class="stroke-gray-900 stroke-[1.5]" stroke-linecap="round" stroke-linejoin="round" d="M9.3746 17.25L4.70022 21.9506C4.34861 22.3021 3.87178 22.4996 3.3746 22.4996C2.87742 22.4996 2.40059 22.3021 2.04897 21.9506C1.69747 21.599 1.5 21.1222 1.5 20.625C1.5 20.1278 1.69747 19.651 2.04897 19.2994L5.9996 15.375"/>
+          </g>
+          <defs>
+            <clipPath id="cutlery">
+              <rect class="size-6 fill-white"/>
+            </clipPath>
+          </defs>
+        </svg>
+        <h5 class="!text-sm !font-semibold !text-gray-900">Pedidos totales</h5>
+      </div>
+      <p class="!text-xl 2xl:!text-3xl !font-semibold !text-gray-800 !leading-none">0</p>
+      <p class="text-xs font-normal text-gray-500 leading-normal">
+        No se han aplicado filtros. 
+        <br>
+        El total de pedidos se mostrará aquí.
+      </p>
+  </div>
+  <!--Card End-->
+  <!--//////////-->
+  <!--Card Start-->
+  <div class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow-sm flex flex-col gap-4 min-h-[132px]">
+    <div class="inline-flex gap-2 items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="fill-none size-6">
+        <path class="stroke-gray-900 stroke-2"  stroke-linecap="round" stroke-linejoin="round" d="M16 8H10C9.46957 8 8.96086 8.21071 8.58579 8.58579C8.21071 8.96086 8 9.46957 8 10C8 10.5304 8.21071 11.0391 8.58579 11.4142C8.96086 11.7893 9.46957 12 10 12H14C14.5304 12 15.0391 12.2107 15.4142 12.5858C15.7893 12.9609 16 13.4696 16 14C16 14.5304 15.7893 15.0391 15.4142 15.4142C15.0391 15.7893 14.5304 16 14 16H8M12 18V6M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" />
+      </svg>
+      <h5 class="!text-sm !font-semibold !text-gray-900">Monto total</h5>
+    </div>
+    <p class="!text-xl 2xl:!text-3xl !font-semibold !text-gray-800 !leading-none">$ 0,00</p>
+    <p class="text-xs font-normal text-gray-500 leading-normal">
+      No se han aplicado filtros.
+      <br>
+      El monto total se reflejará aquí.
+    </p>
+  </div>
+  <!--Card End-->             
+</div>
+<!--Title Page Container Fixed Vertion End-->
+<!--//////////-->
+<!--Filter Start-->
+<div id="accordion-color" data-accordion="collapse" class="mb-4 bg-opacity-100 rounded-lg bg-white shadow" data-active-classes="text-primary rounded-t-lg rounded-b-none">
+  <!--//////////-->
+  <!--Filter Header Start-->
+  <h2 id="accordion-color-heading-1">
+    <button type="button" class="group flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-900 hover:text-primary rounded-lg gap-3 bg-white hover:bg-gray-50 border border-gray-200 hover:border-gray-300" data-accordion-target="#accordion-color-body-1" aria-expanded="true" aria-controls="accordion-color-body-1">
+      <span class="flex gap-2 flex-nowrap">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 24" class="size-6 fill-none">
+          <path class="fill-current hover:fill-primary" d="M14.4971 21C14.2822 21 14.0732 20.9317 13.9013 20.8054L9.90702 17.8865C9.78368 17.7959 9.68357 17.6783 9.61463 17.5432C9.54568 17.4081 9.50978 17.2592 9.50978 17.1081V13.5373L3.88984 6.10378C3.67102 5.81419 3.53856 5.47075 3.50722 5.11175C3.47589 4.75274 3.54691 4.39226 3.71237 4.07047C3.87783 3.74867 4.13123 3.47821 4.44434 3.28921C4.75745 3.1002 5.11798 3.00008 5.48575 3H19.5143C19.882 3.00008 20.2425 3.1002 20.5557 3.28921C20.8688 3.47821 21.1222 3.74867 21.2876 4.07047C21.4531 4.39226 21.5241 4.75274 21.4928 5.11175C21.4614 5.47075 21.329 5.81419 21.1102 6.10378L15.4902 13.5373V20.027C15.4902 20.2851 15.3856 20.5326 15.1993 20.715C15.0131 20.8975 14.7605 21 14.4971 21ZM11.496 16.6216L13.504 18.0879V13.2162C13.504 13.0057 13.5737 12.8008 13.7026 12.6324L19.5143 4.94595H5.48575L11.3013 12.6324C11.4303 12.8008 11.5 13.0057 11.5 13.2162L11.496 16.6216Z"/>
+        </svg>
+        <span class="text-sm font-semibold pt-0.5 leading-normal">
+          Filtros
+        </span>
+      </span>
+      <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+      </svg>
+    </button>
+  </h2>
+  <!--Filter Header End-->
+  <!--//////////-->
+  <!--Filter Container Inner Start-->
+  <div id="accordion-color-body-1" class="hidden border border-gray-200 border-t-0 rounded-b-lg" aria-labelledby="accordion-color-heading-1">
+    <div class="w-full p-5">
+    <!--Filter Body Start-->
+      <!--//////////-->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 mb-4">
+        <!--//////////-->
+        <!--Input Tyoe Text Start-->
+        <div>
+          <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900">Empleado</label>
+          <input placeholder="Ingresar..." type="text" id="default-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5">
+        </div>
+        <!--Input Type Text End-->
+        <!--//////////-->
+        <!--Select Start-->
+        <div>
+          <label for="options" class="block mb-2 text-sm font-medium text-gray-900">Sucursal</label> 
+          <select
+            id="options"
+            [(ngModel)]="selectedOption"
+            class="bg-gray-50 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5 !text-gray-700 !text-sm !font-normal">
+            <option class="!text-gray-700 !text-sm !font-normal" value="" disabled hidden>Seleccionar...</option>
+            <option class="!text-gray-700 !text-sm !font-normal" *ngFor="let option of options" [value]="option.value">
+              {{ option.label }}
+            </option>
+          </select>
+        </div>
+        <!--Select End-->
+        <!--//////////-->
+        <!--Input Tyoe Text Start-->
+        <div>
+          <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900">N° pedido</label>
+          <input placeholder="Ingresar..." type="number" id="default-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5">
+        </div>
+        <!--Input Type Text End-->
+        <!--//////////-->
+        <!--Select Start-->
+        <div>
+          <label for="options02" class="block mb-2 text-sm font-medium text-gray-900">Lote</label>
+          <select
+            id="options02"
+            [(ngModel)]="selectedOption02"
+            class="bg-gray-50 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5 !text-gray-700 !text-sm !font-normal">
+            <option class="!text-gray-700 !text-sm !font-normal" value="" disabled hidden>Seleccionar...</option>
+            <option class="!text-gray-700 !text-sm !font-normal" *ngFor="let option02 of options02" [value]="option02.value">
+              {{ option02.label }}
+            </option>
+          </select>
+        </div>
+        <!--Select End-->
+        <!--//////////-->
+        <!--Datepickert Start-->
+        <div>
+          <label for="date-range-picker" class="block mb-2 text-sm font-medium text-gray-900">Fecha</label>
+          <div id="date-range-picker" class="flex items-center gap-4">
+            <!-- Input desde -->
+            <div class="w-full relative">
+              <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                <svg class="w-4 h-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                </svg>
+              </div>
+              <input id="datepicker-range-start" name="start" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full ps-10 p-2.5" placeholder="Desde..." >
+            </div>
+            <!-- Input hasta -->
+            <div class="w-full relative">
+              <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                <svg class="w-4 h-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                </svg>
+              </div>
+              <input id="datepicker-range-end" name="end" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full ps-10 p-2.5" placeholder="Hasta...">
+            </div>
+          </div>
+        </div>
+        <!--Datepickert End-->
+        <!--//////////-->
+      </div>
+      <!--Filter Body End-->
+      <!--//////////-->
+      <!--Filter Footer Start-->
+      <div class="flex flex-row gap-4 flex-wrap">
+        <!--Tertiary Button Start-->
+        <button type="button" class="py-2.5 px-5 text-sm !font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary focus:z-10 focus:ring-4 focus:ring-gray-100">
+          Limpiar
+        </button>
+        <!--Tertiary Button End-->
+        <!--//////////-->
+        <!--Secondary Button Start-->
+        <button type="button"class="items-center text-primary hover:text-white bg-transparent hover:bg-primary focus:ring-4 focus:ring-primary focus:ring-opacity-30 !font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none border border-primary">
+          Aplicar
+        </button>
+        <!--Secondary Button End-->
+      </div>
+      <!--Filter Footer End-->
+    </div>
+  </div>
+  <!--Filter Container Inner End-->
+   <!--//////////-->
+</div>
+<!--Filter End-->
+<!--//////////-->
+<!--DataTable Start-->
+<app-datatables
+  [titlesList]="titlesList"
+  [dtOptions]="dtOptions"
+  [fistThSellectAll]="true"
+  [isCheckbox]="false"
+  [switchId]="'main'"
+  (selectAllEmitter)="onSelectAll($event)"
+></app-datatables>
+<!--DataTable End-->
+<!--//////////-->
+
+
+  
+

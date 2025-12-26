@@ -1,0 +1,24 @@
+<nav class="w-fit flex min-h-6" aria-label="Breadcrumb">
+  <ol class="inline-flex items-center">
+    @for (item of breadcrumItems; track $index) {
+      <li class="flex items-center text-gray-700 !text-sm !font-medium gap-2">
+        @if (item.safeIconSvg) {
+          <!-- Ícono custom (SVG) -->
+          <span class="flex justify-center items-center size-5" [innerHTML]="item.safeIconSvg"></span>
+        }
+        @if ($index > 0) {
+          <!-- Separador -->
+          <i-feather name="chevron-right" class="ml-2 !size-5 text-gray-400"></i-feather>
+        }
+        @if (!item.isLink) {
+          <span>{{ item.text }}</span>
+        }
+        @if (item.isLink) {
+          <span [routerLink]="item.routerLink" class="cursor-pointer">
+            {{ item.text }}
+          </span>
+        }
+      </li>
+    }
+  </ol>
+</nav>

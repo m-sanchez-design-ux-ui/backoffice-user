@@ -1,0 +1,460 @@
+/* You can add global styles to this file, and also import other style files */
+
+/*
+____ ____ _ ____ _ _  _    ____ ____ _   _  _ ___ _ ____ _  _ ____
+|  | |__/ | | __ | |\ |    [__  |  | |   |  |  |  | |  | |\ | [__ 
+|__| |  \ | |__] | | \|    ___] |__| |__ |__|  |  | |__| | \| ___]
+ 
+*/
+
+/*----Import css for tailwind----*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*----Import css for tailwind----*/
+/*----------Weight 100-----------*/
+@font-face {
+  font-family: "Montserrat";
+  src: url("../public/fonts/Montserrat-Thin.ttf");
+  src: url("../public/fonts/Montserrat-Thin.ttf") format("truetype");
+  /* You can add more fonts formats here */
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+/*----------Weight 200-----------*/
+@font-face {
+  font-family: "Montserrat";
+  src: url("../public/fonts/Montserrat-ExtraLight.ttf");
+  src: url("../public/fonts/Montserrat-ExtraLight.ttf") format("truetype");
+  /* You can add more fonts formats here */
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+/*----------Weight 300-----------*/
+@font-face {
+  font-family: "Montserrat";
+  src: url("../public/fonts/Montserrat-Light.ttf");
+  src: url("../public/fonts/Montserrat-Light.ttf") format("truetype");
+  /* You can add more fonts formats here */
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+/*----------Weight 400-----------*/
+@font-face {
+  font-family: "Montserrat";
+  src: url("../public/fonts/Montserrat-Regular.ttf");
+  src: url("../public/fonts/Montserrat-Regular.ttf") format("truetype");
+  /* You can add more fonts formats here */
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+/*----------Weight 500-----------*/
+@font-face {
+  font-family: "Montserrat";
+  src: url("../public/fonts/Montserrat-Medium.ttf");
+  src: url("../public/fonts/Montserrat-Medium.ttf") format("truetype");
+  /* You can add more fonts formats here */
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+/*----------Weight 600-----------*/
+@font-face {
+  font-family: "Montserrat";
+  src: url("../public/fonts/Montserrat-SemiBold.ttf");
+  src: url("../public/fonts/Montserrat-SemiBold.ttf") format("truetype");
+  /* You can add more fonts formats here */
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+/*----------Weight 700-----------*/
+@font-face {
+  font-family: "Montserrat";
+  src: url("../public/fonts/Montserrat-Bold.ttf");
+  src: url("../public/fonts/Montserrat-Bold.ttf") format("truetype");
+  /* You can add more fonts formats here */
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+/*----------Weight 800-----------*/
+@font-face {
+  font-family: "Montserrat";
+  src: url("../public/fonts/Montserrat-ExtraBold.ttf");
+  src: url("../public/fonts/Montserrat-ExtraBold.ttf") format("truetype");
+  /* You can add more fonts formats here */
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+/*----------Weight 900-----------*/
+@font-face {
+  font-family: "Montserrat";
+  src: url("../public/fonts/Montserrat-Black.ttf");
+  src: url("../public/fonts/Montserrat-Black.ttf") format("truetype");
+  /* You can add more fonts formats here */
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+/*----------Custom Fonts---------*/
+
+/*----------Variables CSS----------*/
+:root {
+  --color-primary:#046C4E;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-primary-loading-shadow-100: rgba(4, 108, 78, 1);
+  --color-primary-loading-shadow-50: rgba(4, 108, 78, 0.5);
+  --color-primary-loading-shadow-0: rgba(4, 108, 78, 0);
+  --width-flatpicker-card: 340px;
+}
+/*----------Variables CSS----------*/
+
+/*----------Selection Color On Proyect----------*/
+::selection {
+  background: var(--color-primary);
+  color: var(--color-white); 
+}
+/*----------Selection Color On Proyect----------*/
+
+/*----------Color Datepicker Flowbite---------*/
+.datepicker-cell.selected {
+  @apply bg-primary text-white;
+}
+/*----------Color Datepicker Flowbite---------*/
+
+/*------------Styles for Flatpickr Datepicker-------------*/
+.flatpickr-calendar {
+  @apply rounded-lg shadow-lg border-solid border border-gray-200 bg-white p-4 text-sm font-Montserrat;
+  width: var(--width-flatpicker-card);
+}
+
+.flatpickr-months {
+  @apply mb-0;
+}
+
+.flatpickr-month {
+  @apply pb-2 pt-0.5 min-h-12;
+}
+
+.flatpickr-weekday {
+  @apply text-gray-400 font-semibold uppercase text-xs;
+}
+
+.flatpickr-day {
+  @apply rounded-md hover:bg-gray-100 cursor-pointer transition-all duration-150 ease-in-out;
+}
+
+.flatpickr-day.selected {
+  @apply bg-primary bg-opacity-100 text-white border-none;
+}
+
+.flatpickr-day.selected:hover {
+  @apply bg-primary bg-opacity-90 text-white border-none;
+}
+
+.flatpickr-day.nextMonthDay.selected,
+.flatpickr-day.prevMonthDay.selected {
+  @apply bg-primary bg-opacity-100 text-white border-none;
+}
+
+.flatpickr-day.nextMonthDay.selected:hover,
+.flatpickr-day.prevMonthDay.selected:hover {
+  @apply bg-primary bg-opacity-90 text-white border-none;
+}
+
+.flatpickr-day.today {
+  @apply border border-primary bg-white;
+}
+
+.flatpickr-day.today:hover {
+  @apply border border-primary bg-gray-100 text-gray-900;
+}
+
+.flatpickr-innerContainer {
+  @apply border-b-0;
+}
+
+.flatpickr-months .flatpickr-month {
+  @apply bg-transparent;
+}
+
+.flatpickr-months {
+  @apply relative;
+}
+
+.flatpickr-months .flatpickr-prev-month {
+  @apply absolute top-0 left-0 bg-transparent rounded-lg fill-none stroke-gray-900 stroke-1 h-9 flex justify-center items-center;
+}
+
+.flatpickr-months .flatpickr-next-month {
+  @apply absolute top-0 right-0 bg-transparent rounded-lg fill-none stroke-gray-900 stroke-1;
+}
+
+.flatpickr-months .flatpickr-prev-month:hover,
+.flatpickr-months .flatpickr-next-month:hover {
+  @apply bg-gray-100;
+}
+
+.flatpickr-months .flatpickr-prev-month:hover svg,
+.flatpickr-months .flatpickr-next-month:hover svg {
+  @apply bg-gray-100;
+}
+
+.flatpickr-day {
+  @apply text-gray-900 font-semibold text-sm border-0;
+}
+
+.flatpickr-day:hover {
+  @apply bg-gray-100 border-0;
+}
+
+.flatpickr-day.prevMonthDay,
+.flatpickr-day.nextMonthDay {
+  @apply text-gray-400 border-0;
+}
+
+.flatpickr-day.prevMonthDay:hover,
+.flatpickr-day.nextMonthDay:hover {
+  @apply bg-gray-100 border-0;
+}
+
+.flatpickr-weekdays {
+  @apply bg-transparent;
+}
+
+span.flatpickr-weekday {
+  @apply text-sm font-medium text-gray-500 bg-transparent capitalize;
+}
+
+.flatpickr-days {
+  @apply border-l-0 border-r-0;
+}
+
+.flatpickr-calendar.arrowTop:before,
+.flatpickr-calendar.arrowBottom:before,
+.flatpickr-calendar.arrowTop:after,
+.flatpickr-calendar.arrowBottom:after {
+  @apply border-transparent hidden;
+}
+
+.flatpickr-current-month .flatpickr-monthDropdown-months {
+  @apply rounded-lg py-1 px-2.5 h-full bg-transparent text-sm font-semibold text-gray-900;
+}
+
+.flatpickr-current-month .flatpickr-monthDropdown-months:hover,
+.flatpickr-current-month .flatpickr-monthDropdown-months:focus {
+  @apply bg-gray-100 text-gray-900;
+}
+
+.flatpickr-current-month {
+  @apply p-0 flex gap-2;
+}
+
+.flatpickr-current-month .flatpickr-monthDropdown-months,
+.flatpickr-current-month .flatpickr-monthDropdown-months:hover {
+  @apply appearance-none bg-no-repeat pr-8;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="111827" height="16" viewBox="0 0 20 20" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M5.516 7.548l4.484 4.473 4.484-4.473L15 9l-5 5-5-5z"/></svg>');
+  background-position: right 0.5rem center; 
+}
+
+.flatpickr-current-month input.cur-year {
+  @apply rounded-lg py-1 px-2.5 h-full bg-transparent text-sm font-semibold text-gray-900;
+  height: 34px;
+}
+
+.flatpickr-current-month input.cur-year:hover {
+  @apply rounded-lg py-1 px-2.5 h-full text-sm font-semibold text-gray-900 border-0 gap-0;
+}
+
+.numInputWrapper:hover {
+  @apply rounded-lg bg-gray-100;
+  height: 34px;
+}
+
+.numInputWrapper:hover > .arrowUp {
+  @apply bg-gray-200 border-0 rounded-tl-none rounded-tr-md;
+}
+
+.numInputWrapper:hover > .arrowDown {
+  @apply bg-gray-200 border-0 rounded-bl-none rounded-br-md;
+}
+
+.numInputWrapper:hover > .arrowUp:hover,
+.numInputWrapper:hover > .arrowDown:hover {
+  @apply bg-gray-300;
+}
+/*------------Styles for Flatpickr Datepicker-------------*/
+
+/*------------Styles for DataTable Backoffice-------------*/
+.table {
+  @apply w-full;
+}   
+
+table.dataTable.stripe > tbody > tr:nth-child(odd) > *, table.dataTable.display > tbody > tr:nth-child(odd) > * {
+  @apply bg-gray-50 hover:bg-gray-100;
+}
+
+table.dataTable.stripe > tbody > tr:nth-child(even) > *, table.dataTable.display > tbody > tr:nth-child(even) > * {
+  @apply bg-white hover:bg-gray-100
+}
+
+table.dataTable.order-column > tbody tr > .sorting_1, table.dataTable.order-column > tbody tr > .sorting_2, table.dataTable.order-column > tbody tr > .sorting_3, table.dataTable.display > tbody tr > .sorting_1, table.dataTable.display > tbody tr > .sorting_2, table.dataTable.display > tbody tr > .sorting_3 {
+  @apply bg-gray-100 hover:bg-gray-200;
+}
+
+.datatable__body tr td {
+  @apply !p-4 !text-left !text-gray-700 !text-xs !font-semibold;
+}
+
+table.dataTable > thead > tr > th, table.dataTable > thead > tr > td {
+  @apply bg-white p-4 border-b-primary border-opacity-50 uppercase font-semibold !text-left text-xs; 
+}
+
+div.dt-container.dt-empty-footer tbody > tr:last-child > * {
+  @apply border-b border-t border-b-gray-200;
+}
+
+table.dataTable.stripe > tbody > tr > *, table.dataTable.display > tbody > tr > * {
+  height: 65px !important;
+  @apply  border-gray-200;
+}
+
+thead {
+  height: 65px !important;
+}
+
+table.dataTable thead > tr > th.dt-orderable-asc:hover, table.dataTable thead > tr > th.dt-orderable-desc:hover, table.dataTable thead > tr > td.dt-orderable-asc:hover, table.dataTable thead > tr > td.dt-orderable-desc:hover {
+  @apply outline-none outline-0 outline-transparent bg-gray-100;
+}
+
+table.dataTable thead > tr > th.dt-orderable-asc span.dt-column-order::before, table.dataTable thead > tr > th.dt-ordering-asc span.dt-column-order::before, table.dataTable thead > tr > td.dt-orderable-asc span.dt-column-order::before, table.dataTable thead > tr > td.dt-ordering-asc span.dt-column-order::before {
+    @apply absolute block text-xl text-primary font-bold rotate-90 scale-x-50;
+    content: "<" / "";
+    bottom: 50%;
+}
+
+table.dataTable thead > tr > th.dt-orderable-desc span.dt-column-order::after, table.dataTable thead > tr > th.dt-ordering-desc span.dt-column-order::after, table.dataTable thead > tr > td.dt-orderable-desc span.dt-column-order::after, table.dataTable thead > tr > td.dt-ordering-desc span.dt-column-order::after {
+    @apply absolute block text-xl text-primary font-bold rotate-90 scale-x-50;
+    content: ">" / "";
+    top: 50%;
+}
+
+.datatable__footer {
+  @apply bg-white flex flex-wrap justify-between gap-4 p-4 overflow-x-auto;
+}
+
+.datatable__footer > div:first-of-type {
+  @apply !bg-transparent flex flex-nowrap gap-4 items-center;
+}
+
+.datatable__footer > div:first-of-type .dt-length {
+  @apply bg-transparent flex flex-row-reverse flex-nowrap items-center gap-4;
+}
+
+.datatable__footer > div:first-of-type .dt-length > .dt-input {
+  @apply h-10 px-2.5 py-1 bg-transparent min-w-14 text-sm font-normal text-gray-700 bg-gray-50 border-gray-300 focus:border-primary rounded-lg;
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--color-primary);
+}
+
+.datatable__footer > div:first-of-type .dt-length > label::before {
+   content: "Filas";
+   @apply block text-sm font-semibold text-gray-700;
+}
+
+.datatable__footer > div:first-of-type .dt-info {
+  @apply text-sm font-semibold text-gray-700 whitespace-nowrap;
+}
+
+.datatable__footer .dt-paging > nav {
+  @apply bg-transparent flex items-center gap-2;
+}
+
+
+.datatable__footer .dt-paging > nav > .dt-paging-button {
+  @apply border-gray-300 hover:border-primary focus:border-primary m-0 p-2 size-10 rounded-lg !flex !justify-center !items-center !text-sm !font-medium !text-gray-700 hover:text-white hover:font-semibold bg-white;
+}
+
+.datatable__footer .dt-paging > nav > .dt-paging-button:active {
+  @apply !text-white !font-semibold;
+  background: var(--color-primary) !important;
+}
+
+.datatable__footer .dt-paging > nav > .dt-paging-button.previous, .datatable__footer .dt-paging > nav > .dt-paging-button.next {
+  @apply !text-gray-700 focus:!text-primary;
+}
+
+.datatable__footer .dt-paging > nav > .dt-paging-button.previous:active, .datatable__footer .dt-paging > nav > .dt-paging-button.next:active {
+  @apply !text-white;
+}
+
+.datatable__footer .dt-paging > nav > .dt-paging-button.current { 
+  @apply cursor-default border !border-primary !bg-primary hover:!bg-primary !opacity-100 !text-white hover:!text-white !font-semibold;
+  pointer-events: none !important;
+}
+
+div.dt-container .dt-paging .dt-paging-button:hover {
+  @apply !text-primary !font-semibold !border-solid !border;
+  background: var(--color-white) !important;
+}
+
+div.dt-container .dt-paging .dt-paging-button.disabled, div.dt-container .dt-paging .dt-paging-button.disabled:hover, div.dt-container .dt-paging .dt-paging-button.disabled:active {
+  @apply !bg-white !cursor-default !text-gray-300 !bg-transparent focus:!border-gray-200 !border !border-gray-200 focus:!text-gray-200;
+  pointer-events: none !important;
+}
+
+div.dt-container .dt-paging .dt-paging-button:active {
+  @apply !ring-4 !ring-primary !ring-opacity-30;
+  box-shadow: unset;
+}
+
+.datatable__footer .dt-paging > nav > .dt-paging-button.previous:focus, .datatable__footer .dt-paging > nav > .dt-paging-button.next:focus {
+  @apply hover:!text-primary hover:!bg-gray-100;
+}
+
+/*------------Styles for DataTable Backoffice-------------*/
+
+/*------------Styles for spinner in the Data Table-------------*/
+.dt-processing {
+  display: none;
+}
+
+div.dt-processing > div:last-child > div {
+    background: var(--color-primary);
+}
+/*------------Styles for spinner in the Data Table-------------*/
+
+/*----------------------Loading Container-----------------------*/
+
+.animation-pulse {
+  box-shadow: 0 0 0 20px var(--color-primary-loading-shadow-50);
+  transform: scale(0.8);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    box-shadow: 0 0 0 0px var(--color-primary-loading-shadow-100);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 60px var(--color-primary-loading-shadow-0);
+  }
+
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+/*----------------------Loading Container-----------------------*/
+
+

@@ -1,0 +1,348 @@
+<!--//////////-->
+<!--Loading Component Start-->
+<app-loading/>
+<!--Loading Component End-->
+<!--//////////-->
+<!--Toast Notification Start-->
+<app-notifications/>
+<!--Toast Notification End-->
+<!--//////////-->
+<!--Breadcrumb Start-->
+<div class="flex flex-row flex-wrap justify-between items-center w-full mb-4 gap-4">
+  <app-breadcrumb [breadcrumItems]="this.breadcrumb"></app-breadcrumb>
+    <div class="flex flex-row gap-4 flex-wrap">
+      <!--Link Button Start-->
+      <a href="#" class="py-2.5 text-sm font-medium text-primary hover:underline whitespace-nowrap">
+          Link button
+      </a>
+      <!--Link Button End-->
+      <!--//////////-->
+      <!--Tertiary Button Start-->
+      <button type="button" class="group flex items-center flex-nowrap gap-2 py-2.5 px-5 text-sm !font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary focus:z-10 focus:ring-4 focus:ring-gray-100">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="min-h-4 max-h-4 min-w-4 max-w-4 fill-none rotate-180">
+          <path class="fill-gray-900 group-hover:fill-primary" fill-rule="evenodd" clip-rule="evenodd" d="M2.40039 13.6C2.40039 13.3878 2.48468 13.1843 2.63471 13.0343C2.78473 12.8843 2.98822 12.8 3.20039 12.8H12.8004C13.0126 12.8 13.216 12.8843 13.3661 13.0343C13.5161 13.1843 13.6004 13.3878 13.6004 13.6C13.6004 13.8121 13.5161 14.0156 13.3661 14.1657C13.216 14.3157 13.0126 14.4 12.8004 14.4H3.20039C2.98822 14.4 2.78473 14.3157 2.63471 14.1657C2.48468 14.0156 2.40039 13.8121 2.40039 13.6ZM5.03479 7.43438C5.18481 7.2844 5.38826 7.20015 5.60039 7.20015C5.81252 7.20015 6.01597 7.2844 6.16599 7.43438L7.20039 8.46878V2.39998C7.20039 2.1878 7.28468 1.98432 7.43471 1.83429C7.58473 1.68426 7.78822 1.59998 8.00039 1.59998C8.21256 1.59998 8.41605 1.68426 8.56608 1.83429C8.71611 1.98432 8.80039 2.1878 8.80039 2.39998V8.46878L9.83479 7.43438C9.90859 7.35797 9.99686 7.29702 10.0945 7.25509C10.1921 7.21317 10.297 7.1911 10.4033 7.19017C10.5095 7.18925 10.6148 7.20949 10.7132 7.24972C10.8115 7.28994 10.9008 7.34935 10.9759 7.42446C11.051 7.49957 11.1104 7.58889 11.1506 7.68721C11.1909 7.78553 11.2111 7.89087 11.2102 7.9971C11.2093 8.10332 11.1872 8.2083 11.1453 8.3059C11.1033 8.4035 11.0424 8.49178 10.966 8.56557L8.56599 10.9656C8.41597 11.1156 8.21252 11.1998 8.00039 11.1998C7.78826 11.1998 7.58481 11.1156 7.43479 10.9656L5.03479 8.56557C4.88481 8.41555 4.80056 8.21211 4.80056 7.99998C4.80056 7.78784 4.88481 7.5844 5.03479 7.43438V7.43438Z"/>
+        </svg>
+        <span>
+          Tertiary button
+        </span>
+      </button>
+      <!--Tertiary Button End-->
+      <!--//////////-->
+      <!--Secondary Button Start-->
+      <button type="button"class="group flex flex-row gap-2 items-center text-primary hover:text-white bg-transparent hover:bg-primary focus:ring-4 focus:ring-primary focus:ring-opacity-30 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none border border-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="size-4 fill-none">
+          <path class="fill-primary group-hover:fill-white" fill-rule="evenodd" clip-rule="evenodd" d="M2.40039 13.6C2.40039 13.3878 2.48468 13.1843 2.63471 13.0343C2.78473 12.8843 2.98822 12.8 3.20039 12.8H12.8004C13.0126 12.8 13.216 12.8843 13.3661 13.0343C13.5161 13.1843 13.6004 13.3878 13.6004 13.6C13.6004 13.8121 13.5161 14.0156 13.3661 14.1657C13.216 14.3157 13.0126 14.4 12.8004 14.4H3.20039C2.98822 14.4 2.78473 14.3157 2.63471 14.1657C2.48468 14.0156 2.40039 13.8121 2.40039 13.6ZM5.03479 7.43438C5.18481 7.2844 5.38826 7.20015 5.60039 7.20015C5.81252 7.20015 6.01597 7.2844 6.16599 7.43438L7.20039 8.46878V2.39998C7.20039 2.1878 7.28468 1.98432 7.43471 1.83429C7.58473 1.68426 7.78822 1.59998 8.00039 1.59998C8.21256 1.59998 8.41605 1.68426 8.56608 1.83429C8.71611 1.98432 8.80039 2.1878 8.80039 2.39998V8.46878L9.83479 7.43438C9.90859 7.35797 9.99686 7.29702 10.0945 7.25509C10.1921 7.21317 10.297 7.1911 10.4033 7.19017C10.5095 7.18925 10.6148 7.20949 10.7132 7.24972C10.8115 7.28994 10.9008 7.34935 10.9759 7.42446C11.051 7.49957 11.1104 7.58889 11.1506 7.68721C11.1909 7.78553 11.2111 7.89087 11.2102 7.9971C11.2093 8.10332 11.1872 8.2083 11.1453 8.3059C11.1033 8.4035 11.0424 8.49178 10.966 8.56557L8.56599 10.9656C8.41597 11.1156 8.21252 11.1998 8.00039 11.1998C7.78826 11.1998 7.58481 11.1156 7.43479 10.9656L5.03479 8.56557C4.88481 8.41555 4.80056 8.21211 4.80056 7.99998C4.80056 7.78784 4.88481 7.5844 5.03479 7.43438V7.43438Z"/>
+        </svg>
+        <span>
+          Seconday button
+        </span>
+      </button>
+      <!--Secondary Button End-->
+      <!--//////////-->
+      <!--Primary Button Start-->
+      <button data-modal-target="create-modal" data-modal-toggle="create-modal" type="button"class="flex flex-row gap-2 items-center text-white bg-primary hover:bg-opacity-90 focus:ring-4 focus:ring-primary focus:ring-opacity-30 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" class="fill-none size-[18px]">
+          <path class="fill-white" fill-rule="evenodd" clip-rule="evenodd" d="M9 4.5C9.23869 4.5 9.46761 4.59482 9.6364 4.7636C9.80518 4.93239 9.9 5.16131 9.9 5.4V8.1H12.6C12.8387 8.1 13.0676 8.19482 13.2364 8.3636C13.4052 8.53239 13.5 8.76131 13.5 9C13.5 9.23869 13.4052 9.46761 13.2364 9.6364C13.0676 9.80518 12.8387 9.9 12.6 9.9H9.9V12.6C9.9 12.8387 9.80518 13.0676 9.6364 13.2364C9.46761 13.4052 9.23869 13.5 9 13.5C8.76131 13.5 8.53239 13.4052 8.3636 13.2364C8.19482 13.0676 8.1 12.8387 8.1 12.6V9.9H5.4C5.16131 9.9 4.93239 9.80518 4.7636 9.6364C4.59482 9.46761 4.5 9.23869 4.5 9C4.5 8.76131 4.59482 8.53239 4.7636 8.3636C4.93239 8.19482 5.16131 8.1 5.4 8.1H8.1V5.4C8.1 5.16131 8.19482 4.93239 8.3636 4.7636C8.53239 4.59482 8.76131 4.5 9 4.5V4.5Z"/>
+        </svg>
+        <span>
+          Primary button
+        </span>
+      </button>
+      <!--Primary Button End-->
+    </div>
+</div>
+<!--Breadcrumb End-->
+<!--//////////-->
+<!--Title Page Container Start-->
+<h3 class="text-xl 2xl:text-2xl text-gray-900 font-semibold w-full py-4">Título template</h3>
+<!--Title Page Container End-->
+<!--//////////-->
+<!--Filter Start-->
+<div id="accordion-color" data-accordion="collapse" class="mb-4 bg-opacity-100 rounded-lg bg-white shadow" data-active-classes="text-primary rounded-t-lg rounded-b-none">
+  <!--//////////-->
+  <!--Filter Header Start-->
+  <h2 id="accordion-color-heading-1">
+    <button type="button" class="group flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-900 hover:text-primary rounded-lg gap-3 bg-white hover:bg-gray-50 border border-gray-200 hover:border-gray-300" data-accordion-target="#accordion-color-body-1" aria-expanded="true" aria-controls="accordion-color-body-1">
+      <span class="flex gap-2 flex-nowrap">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 24" class="size-6 fill-none">
+          <path class="fill-current hover:fill-primary" d="M14.4971 21C14.2822 21 14.0732 20.9317 13.9013 20.8054L9.90702 17.8865C9.78368 17.7959 9.68357 17.6783 9.61463 17.5432C9.54568 17.4081 9.50978 17.2592 9.50978 17.1081V13.5373L3.88984 6.10378C3.67102 5.81419 3.53856 5.47075 3.50722 5.11175C3.47589 4.75274 3.54691 4.39226 3.71237 4.07047C3.87783 3.74867 4.13123 3.47821 4.44434 3.28921C4.75745 3.1002 5.11798 3.00008 5.48575 3H19.5143C19.882 3.00008 20.2425 3.1002 20.5557 3.28921C20.8688 3.47821 21.1222 3.74867 21.2876 4.07047C21.4531 4.39226 21.5241 4.75274 21.4928 5.11175C21.4614 5.47075 21.329 5.81419 21.1102 6.10378L15.4902 13.5373V20.027C15.4902 20.2851 15.3856 20.5326 15.1993 20.715C15.0131 20.8975 14.7605 21 14.4971 21ZM11.496 16.6216L13.504 18.0879V13.2162C13.504 13.0057 13.5737 12.8008 13.7026 12.6324L19.5143 4.94595H5.48575L11.3013 12.6324C11.4303 12.8008 11.5 13.0057 11.5 13.2162L11.496 16.6216Z"/>
+        </svg>
+        <span class="text-sm font-semibold pt-0.5 leading-normal">
+          Filtros
+        </span>
+      </span>
+      <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+      </svg>
+    </button>
+  </h2>
+  <!--Filter Header End-->
+  <!--//////////-->
+  <!--Filter Container Inner Start-->
+  <div id="accordion-color-body-1" class="hidden border border-gray-200 border-t-0 rounded-b-lg" aria-labelledby="accordion-color-heading-1">
+    <div class="w-full p-5">
+    <!--Filter Body Start-->
+      <!--//////////-->
+      <!--Body For 5  Elements Start-->
+      <!-- <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 mb-4"></div> -->
+      <!--Body For 5  Elements End-->
+      <!--//////////-->
+      <!--Body For 4  Elements Start-->
+      <!-- <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mb-4"></div> -->
+      <!--Body For 4  Elements End-->
+      <!--//////////-->
+      <!--Body For 3  Elements Start-->
+      <!-- <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-4 mb-4"></div> -->
+      <!--Body For 3  Elements End-->
+      <!--//////////-->
+      <!--Body For 2  Elements Start-->
+      <!-- <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4"></div> -->
+      <!--Body For 2  Elements End-->
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mb-4">
+        <!--//////////-->
+        <!--Input Tyoe Text Start-->
+        <div>
+          <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900">Input Type Text</label>
+          <input placeholder="Ingresar..." type="text" id="default-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5">
+        </div>
+        <!--Input Type Text End-->
+        <!--//////////-->
+        <!--Select Start-->
+        <div>
+          <label for="options" class="block mb-2 text-sm font-medium text-gray-900">Select</label>
+          <select
+            id="options"
+            [(ngModel)]="selectedOption"
+            class="bg-gray-50 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5 !text-gray-700 !text-sm !font-normal">
+            <option class="!text-gray-700 !text-sm !font-normal" value="" disabled hidden>Seleccionar...</option>
+            <option class="!text-gray-700 !text-sm !font-normal" *ngFor="let option of options" [value]="option.value">
+              {{ option.label }}
+            </option>
+          </select>
+        </div>
+        <!--Select End-->
+        <!--//////////-->
+        <!--Datepickert Start-->
+        <div>
+          <label for="date-range-picker" class="block mb-2 text-sm font-medium text-gray-900">Fecha...</label>
+          <div id="date-range-picker" class="flex items-center gap-4">
+            <!-- Input desde -->
+            <div class="w-full relative">
+              <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                <svg class="w-4 h-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                </svg>
+              </div>
+              <input id="datepicker-range-start" name="start" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full ps-10 p-2.5" placeholder="Desde..." >
+            </div>
+            <!-- Input hasta -->
+            <div class="w-full relative">
+              <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                <svg class="w-4 h-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                </svg>
+              </div>
+              <input id="datepicker-range-end" name="end" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full ps-10 p-2.5" placeholder="Hasta...">
+            </div>
+          </div>
+        </div>
+        <!--Datepickert End-->
+        <!--//////////-->
+        <!--Search Start-->  
+        <div class="mt-auto">   
+          <label for="search" class="mb-2 text-sm font-medium text-gray-900 sr-only">Buscar...</label>
+          <div class="relative">
+              <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                  <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                  </svg>
+              </div>
+              <input type="search" id="search" class="block w-full p-2.5 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-primary focus:border-primary" placeholder="Buscar..." required />
+          </div>
+        </div>
+        <!--Search End--> 
+        <!--//////////-->
+      </div>
+      <!--Filter Body End-->
+      <!--//////////-->
+      <!--Filter Footer Start-->
+      <div class="flex flex-row gap-4 flex-wrap">
+        <!--Tertiary Button Start-->
+        <button type="button" class="py-2.5 px-5 text-sm !font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary focus:z-10 focus:ring-4 focus:ring-gray-100">
+          Limpiar
+        </button>
+        <!--Tertiary Button End-->
+        <!--//////////-->
+        <!--Secondary Button Start-->
+        <button type="button"class="items-center text-primary hover:text-white bg-transparent hover:bg-primary focus:ring-4 focus:ring-primary focus:ring-opacity-30 !font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none border border-primary">
+          Aplicar
+        </button>
+        <!--Secondary Button End-->
+      </div>
+      <!--Filter Footer End-->
+    </div>
+  </div>
+  <!--Filter Container Inner End-->
+   <!--//////////-->
+</div>
+<!--Filter End-->
+<!--//////////-->
+<!--Card Buttons Group Start-->
+<div class="flex flex-wrap gap-4 border rounded-lg border-gray-200 bg-white shadow p-5 mb-4">
+  <!--//////////-->
+  <!--Tertiary Button Start-->
+  <button data-modal-target="default-modal" data-modal-toggle="default-modal" type="button" class="py-2.5 px-5 text-sm !font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary focus:z-10 focus:ring-4 focus:ring-gray-100">
+    Show Default Modal
+  </button>
+  <!--Tertiary Button End-->
+  <!--//////////-->
+  <!--Tertiary Button Start-->
+  <button data-modal-target="delete-modal" data-modal-toggle="delete-modal" type="button" class="py-2.5 px-5 text-sm !font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary focus:z-10 focus:ring-4 focus:ring-gray-100">
+    Show Delete Modal
+  </button>
+  <!--Tertiary Button End-->
+  <!--//////////-->
+  <!--Tertiary Button Start-->
+  <button (click)="showLoading()" type="button" class="py-2.5 px-5 text-sm !font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary focus:z-10 focus:ring-4 focus:ring-gray-100">
+    Show Loading
+  </button>
+  <!--Tertiary Button End-->
+  <!--//////////-->
+  <!--Tertiary Button Start-->
+  <button (click)="ShowNotificationToastDanger()" type="button" class="py-2.5 px-5 text-sm !font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary focus:z-10 focus:ring-4 focus:ring-gray-100">
+    Toast danger
+  </button>
+  <!--Tertiary Button End-->
+  <!--//////////-->
+  <!--Tertiary Button Start-->
+  <button type="button" (click)="ShowNotificationToastSuccess()" class="py-2.5 px-5 text-sm !font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary focus:z-10 focus:ring-4 focus:ring-gray-100">
+    Toast success
+  </button>
+  <!--Tertiary Button End-->
+  <!--//////////-->
+  <!--Tertiary Button Start-->
+  <button type="button" (click)="ShowNotificationToastWarning()" class="py-2.5 px-5 text-sm !font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary focus:z-10 focus:ring-4 focus:ring-gray-100">
+    Toast warning
+  </button>
+  <!--Tertiary Button End-->
+  <!--//////////-->
+  <!--Tertiary Button Start-->
+  <button type="button" (click)="ShowNotificationToastInfo()" class="py-2.5 px-5 text-sm !font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary focus:z-10 focus:ring-4 focus:ring-gray-100">
+    Toast Info
+  </button>
+  <!--Tertiary Button End-->
+  <!--//////////-->
+  <!--Tertiary Button Start-->
+  <button [routerLink]="'/error-404'" type="button" class="py-2.5 px-5 text-sm !font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary focus:z-10 focus:ring-4 focus:ring-gray-100">
+    Page Error 404
+  </button>
+  <!--Tertiary Button End-->
+  <!--//////////-->
+  <!--Tertiary Button Start-->
+  <button [routerLink]="'/error-500'" type="button" class="py-2.5 px-5 text-sm !font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary focus:z-10 focus:ring-4 focus:ring-gray-100">
+    Page Error 500
+  </button>
+  <!--Tertiary Button End-->
+  <!--//////////-->
+</div>
+<!--Card Buttons Group End-->
+<!--//////////-->
+<!--DataTable Start-->
+<app-datatables
+  [titlesList]="titlesList"
+  [dtOptions]="dtOptions"
+  [fistThSellectAll]="true"
+  [isCheckbox]="false"
+  [switchId]="'main'"
+  (selectAllEmitter)="onSelectAll($event)"
+></app-datatables>
+<!--DataTable End-->
+<!--//////////-->
+<!--Grids Guide Start-->
+<!--//////////-->
+<!--Full 4 col and 2 row Start-->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+  <div
+    class="border-2 border-dashed border-gray-300 rounded-lg dark:border-gray-600 min-h-32 md:min-h-48"
+  ></div>
+  <div
+    class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 min-h-32 md:min-h-48"
+  ></div>
+  <div
+    class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 min-h-32 md:min-h-48"
+  ></div>
+  <div
+    class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 min-h-32 md:min-h-48"
+  ></div>
+</div>
+<!--Full 4 col and 2 row End-->
+<!--Full 3 col and 2 row Start-->
+<div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-4 mb-4">
+  <div
+    class="border-2 border-dashed border-gray-300 rounded-lg dark:border-gray-600 min-h-32 md:min-h-48"
+  ></div>
+  <div
+    class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 min-h-32 md:min-h-48"
+  ></div>
+  <div
+    class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 min-h-32 md:min-h-48"
+  ></div>
+  <div
+    class="border-2 border-dashed border-gray-300 rounded-lg dark:border-gray-600 min-h-32 md:min-h-48"
+  ></div>
+  <div
+    class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 min-h-32 md:min-h-48"
+  ></div>
+  <div
+    class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 min-h-32 md:min-h-48"
+  ></div>
+</div>
+<!--Full 3 col and 2 row End-->
+<!--//////////-->
+<!--Full 2 col and 2 row Start-->
+<div class="grid grid-cols-2 gap-4 mb-4">
+  <div
+    class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 min-h-32 md:min-h-48"
+  ></div>
+  <div
+    class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 min-h-32 md:min-h-48"
+  ></div>
+  <div
+    class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 min-h-32 md:min-h-48"
+  ></div>
+  <div
+    class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 min-h-32 md:min-h-48"
+  ></div>
+</div>
+<!--Full 2 col and 2 row End-->
+<!--//////////-->
+<!--Full Row Start-->
+<div class="border-2 border-dashed rounded-lg border-gray-300 min-h-32 md:min-h-48 mb-4"></div>
+<!--Full Row End-->
+<!--//////////-->
+<!--Grids Guide End-->
+<!--//////////-->
+<!--Modal Default Start-->
+<app-modal-default-example/>
+<!--Modal Default End-->
+<!--//////////-->
+<!--Modal Delete Start-->
+<app-modal-delete/>
+<!--Modal Delete End-->
+<!--//////////-->
+<!--Modal Edit Start-->
+<app-edit-modal />
+<!--Modal Edit End-->
+<!--//////////-->
+<!--Modal Create Start-->
+<app-create-modal />
+<!--Modal Create End-->
+<!--//////////-->
+
+
+
+
+
+
+
+
