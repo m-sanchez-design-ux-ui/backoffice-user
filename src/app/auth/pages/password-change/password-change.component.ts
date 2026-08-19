@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import {
   AbstractControlOptions,
   FormBuilder,
@@ -16,11 +16,6 @@ import { SignInService } from '../../services/sign-in.service';
 import { MustMatch } from '../../../shared/services/form-validator.service';
 import { NotificationsComponent } from '../../../shared/notifications/notifications.component';
 import { trigger, transition, style, animate } from '@angular/animations';
-import {
-  RecaptchaComponent,
-  RecaptchaFormsModule,
-  RecaptchaModule,
-} from 'ng-recaptcha-2';
 import { IResetPasswordRequest } from '../../interfaces/reset-password.interface';
 import { FeatherModule } from 'angular-feather';
 
@@ -28,8 +23,6 @@ import { FeatherModule } from 'angular-feather';
   selector: 'app-password-change',
   standalone: true,
   imports: [
-    RecaptchaModule,
-    RecaptchaFormsModule,
     ReactiveFormsModule,
     NotificationsComponent,
     FeatherModule,
@@ -47,12 +40,10 @@ import { FeatherModule } from 'angular-feather';
   ],
 })
 export class PasswordChangeComponent implements OnInit, OnDestroy {
-  @ViewChild(RecaptchaComponent) recaptchaComponent!: RecaptchaComponent;
   public changePasswordForm!: FormGroup;
   private subscription!: Subscription;
   private token!: string;
   private username!: string;
-  private captchaResponse!: string | null;
   public submitted = false;
   public typeInputNewPassword = 'password';
   public typeInputChangePassword = 'password';
@@ -94,7 +85,6 @@ export class PasswordChangeComponent implements OnInit, OnDestroy {
             ),
           ],
         ],
-        captcha: ['', [Validators.required]],
       },
       {
         validator: [MustMatch('password', 'passwordRepeat')],
@@ -106,8 +96,7 @@ export class PasswordChangeComponent implements OnInit, OnDestroy {
     this.loadingService.show();
     if (
       !this.changePasswordForm.valid &&
-      (this.changePasswordForm.controls['captcha'].errors !== null ||
-        this.changePasswordForm.controls['password'].errors !== null ||
+      (this.changePasswordForm.controls['password'].errors !== null ||
         this.changePasswordForm.controls['passwordRepeat'].errors !== null)
     ) {
       this.submitted = true;
@@ -120,7 +109,6 @@ export class PasswordChangeComponent implements OnInit, OnDestroy {
       userName: this.username,
       password: this.changePasswordForm.controls['password'].value,
       passwordRepeat: this.changePasswordForm.controls['passwordRepeat'].value,
-      gRecaptchaResponse: this.captchaResponse!,
     };
     this.signInService.resetPassword(request).subscribe({
       next: () => {
@@ -134,7 +122,6 @@ export class PasswordChangeComponent implements OnInit, OnDestroy {
         }, 1000);
       },
       error: (err) => {
-        this.recaptchaComponent.reset();
         this.loadingService.hide();
         this.notification.showAndClear({
           data: {
@@ -154,10 +141,6 @@ export class PasswordChangeComponent implements OnInit, OnDestroy {
       this.typeInputChangePassword =
         this.typeInputChangePassword === 'password' ? 'text' : 'password';
     }
-  }
-
-  public resolved(captchaResponse: string | null) {
-    this.captchaResponse = captchaResponse;
   }
 
   ngOnDestroy(): void {

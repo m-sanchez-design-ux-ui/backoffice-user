@@ -3,5 +3,4 @@ export interface IResetPasswordRequest {
   userName: string;
   password: string;
   passwordRepeat: string;
-  gRecaptchaResponse: string;
 }

@@ -63,17 +63,6 @@
         <span class="text-red-600">El usuario o la contraseña son incorrectos. Intente nuevamente</span>
       </div>
       }
-      <div class="flex flex-col pt-3">
-        <re-captcha (resolved)="resolved($event)" formControlName="captcha" id="captcha"></re-captcha>
-        @if (loginForm.controls['captcha'].errors?.['required']) {
-        <div class="invalid-feedback !text-gray-600 text-sm">El campo es requerido.</div>
-        } @if (submitted && loginForm.controls['captcha'].value === null) {
-        <div class="captcha--invalid text-red-600">
-          <small>La verificación caducó. Vuelva a marcar la casilla de
-            verificación.</small>
-        </div>
-        }
-      </div>
     </form>
     <div class="gap-2 flex justify-center">
       <button type="button"

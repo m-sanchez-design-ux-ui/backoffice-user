@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { LoadingService } from '../../../shared/loading/loading.service';
@@ -7,7 +7,6 @@ import { NotificationsService } from '../../../shared/notifications/notification
 import { LoginRequest } from './models/login-request.model';
 import { SignInService } from '../../services/sign-in.service';
 import { animate, style, transition, trigger } from '@angular/animations';
-import { RecaptchaComponent, RecaptchaFormsModule, RecaptchaModule } from 'ng-recaptcha-2';
 import { FeatherModule } from 'angular-feather';
 import { ApplicationLoginData } from '../../interfaces/application-login-data.interface';
 import { MessageData } from '../../../shared/models/message-data.model';
@@ -16,8 +15,6 @@ import { MessageData } from '../../../shared/models/message-data.model';
   selector: 'app-sign-in',
   standalone: true,
   imports: [
-    RecaptchaModule,
-    RecaptchaFormsModule,
     ReactiveFormsModule,
     RouterLink,
     FeatherModule,
@@ -36,9 +33,7 @@ import { MessageData } from '../../../shared/models/message-data.model';
   ]
 })
 export class SignInComponent implements OnInit {
-  @ViewChild(RecaptchaComponent) recaptchaComponent!: RecaptchaComponent;
   public loginForm!: FormGroup;
-  private captchaResponse!: string | null;
   public submitted = false;
   public loginError = false;
   navigateTo: string = "";
@@ -72,13 +67,12 @@ export class SignInComponent implements OnInit {
       password: new FormControl('', [
         Validators.required,
         Validators.minLength(4)
-      ]),
-      captcha: new FormControl('', Validators.required)
+      ])
     });
   }
 
   public onSubmit() {
-    if (!this.loginForm.valid || this.loginForm.controls['captcha'].errors !== null) {
+    if (!this.loginForm.valid) {
       this.submitted = true;
       return;
     }
@@ -87,7 +81,6 @@ export class SignInComponent implements OnInit {
     const request : LoginRequest = {
       email: this.loginForm.controls['email'].value,
       password: this.loginForm.controls['password'].value,
-      gRecaptchaResponse: this.captchaResponse,
       clientId : this.appLoginData?.clientId ?? null,
       loginRedirectUrl : this.appLoginData?.loginRedirectUrl ?? null,
       companyId: this.appLoginData?.companyId ?? null,
@@ -106,7 +99,6 @@ export class SignInComponent implements OnInit {
       },
       error: (err) => {
         this.loadingService.hide();
-        this.recaptchaComponent.reset();
           this.notification.showAndClear({
             data: { text: err?.error?.Message },
             type: NotificationType.toastDanger
@@ -119,10 +111,6 @@ export class SignInComponent implements OnInit {
 
   showPassword(){
     this.typeInputPassword = this.typeInputPassword === "password" ? "text" : "password"
-  }
-
-  public resolved(captchaResponse: string | null) {
-    this.captchaResponse = captchaResponse;
   }
 
   private getClientApplicationData() {

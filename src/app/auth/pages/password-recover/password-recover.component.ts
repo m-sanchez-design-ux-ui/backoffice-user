@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
   FormGroup,
   FormControl,
@@ -11,11 +11,6 @@ import { NotificationsService } from '../../../shared/notifications/notification
 import { SignInService } from '../../services/sign-in.service';
 import { NotificationsComponent } from '../../../shared/notifications/notifications.component';
 import { trigger, transition, style, animate } from '@angular/animations';
-import {
-  RecaptchaComponent,
-  RecaptchaFormsModule,
-  RecaptchaModule,
-} from 'ng-recaptcha-2';
 import { isValidEmail } from '../../../shared/utils/isValidEmail';
 import { Router, RouterLink } from '@angular/router';
 
@@ -23,8 +18,6 @@ import { Router, RouterLink } from '@angular/router';
   selector: 'app-password-recover',
   standalone: true,
   imports: [
-    RecaptchaModule,
-    RecaptchaFormsModule,
     NotificationsComponent,
     ReactiveFormsModule,
     RouterLink,
@@ -41,11 +34,8 @@ import { Router, RouterLink } from '@angular/router';
   ],
 })
 export class PasswordRecoverComponent implements OnInit {
-  @ViewChild(RecaptchaComponent) recaptchaComponent!: RecaptchaComponent;
-
   public loginForm!: FormGroup;
 
-  private captchaResponse!: string | null;
   public submitted = false;
   public isValidEmail?: boolean;
 
@@ -59,7 +49,6 @@ export class PasswordRecoverComponent implements OnInit {
   ngOnInit() {
     this.loginForm = new FormGroup({
       email: new FormControl('', [Validators.required, Validators.email]),
-      captcha: new FormControl('', Validators.required),
     });
   }
 
@@ -67,8 +56,7 @@ export class PasswordRecoverComponent implements OnInit {
     const email = this.loginForm.controls['email'].value;
     if (
       !this.loginForm.valid &&
-      (this.loginForm.controls['captcha'].errors !== null ||
-        this.loginForm.controls['email'].errors !== null)
+      this.loginForm.controls['email'].errors !== null
     ) {
       this.submitted = true;
       return;
@@ -81,7 +69,6 @@ export class PasswordRecoverComponent implements OnInit {
 
     const request = {
       email: email,
-      gRecaptchaResponse: this.captchaResponse!,
     };
     
     this.loadingService.show();
@@ -94,10 +81,8 @@ export class PasswordRecoverComponent implements OnInit {
           type: NotificationType.toastSuccess,
         });
         this.loadingService.hide();
-        this.recaptchaComponent.reset();
       },
       error: (err) => {
-        this.recaptchaComponent.reset();
         this.notification.showAndClear({
           data: { text: err.error.Message },
           type: NotificationType.toastDanger,
@@ -105,9 +90,5 @@ export class PasswordRecoverComponent implements OnInit {
         this.loadingService.hide();
       },
     });
-  }
-
-  public resolved(captchaResponse: string | null) {
-    this.captchaResponse = captchaResponse;
   }
 }

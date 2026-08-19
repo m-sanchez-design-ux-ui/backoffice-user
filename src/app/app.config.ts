@@ -23,7 +23,6 @@ import { NotificationsService } from './shared/notifications/notifications.servi
 import { NotificationsAlertService } from './shared/services/notifications-alert.service';
 import { LoadingService } from './shared/loading/loading.service';
 import { DatatablesTwoService } from './shared/datatables/services/datatables-two.service';
-import { RECAPTCHA_SETTINGS, RecaptchaSettings } from 'ng-recaptcha-2';
 import { InterceptorService } from './shared/services/interceptor.service';
 import localeEsAr from '@angular/common/locales/es-AR';
 import localeEs419 from '@angular/common/locales/es-419';
@@ -32,14 +31,6 @@ export function init(config: ConfigService) {
   registerLocaleData(localeEsAr, 'es-AR');
   registerLocaleData(localeEs419, 'es-419');
   return () => config.load();
-}
-
-export function recaptchaSettingsFactory(
-  configService: ConfigService
-): RecaptchaSettings {
-  return {
-    siteKey: configService.getProperty('gRecaptchaSiteKey'),
-  };
 }
 
 export function getLocale(configService: ConfigService) {
@@ -56,11 +47,6 @@ export const appConfig: ApplicationConfig = {
       useFactory: init,
       deps: [ConfigService],
       multi: true,
-    },
-    {
-      provide: RECAPTCHA_SETTINGS,
-      useFactory: recaptchaSettingsFactory,
-      deps: [ConfigService],
     },
     {
       provide: LOCALE_ID,
